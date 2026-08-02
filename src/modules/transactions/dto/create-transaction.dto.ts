@@ -21,5 +21,5 @@ export class CreateTransactionDto {
     type!: TransactionType;
 
     @IsDateString()
-    date!: Date;
+    date!: string;
 }
