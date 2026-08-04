@@ -1,10 +1,6 @@
 import {Type} from "class-transformer";
 import {IsDateString, IsEnum, IsNotEmpty, IsNumber, IsPositive, IsString, MaxLength} from "class-validator";
-
-export enum TransactionType {
-    INCOME = 'INCOME',
-    EXPENSE = 'EXPENSE',
-}
+import {TransactionType} from "@prisma/client";
 
 export class CreateTransactionDto {
     @IsString()
