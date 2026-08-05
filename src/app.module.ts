@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { TransactionModule } from './modules/transactions/transaction.module';
+import {RecurringTransactionModule} from "@/modules/recurring-transaction/recurring-transaction.module";
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { TransactionModule } from './modules/transactions/transaction.module';
     PrismaModule,
     AuthModule,
     TransactionModule,
+    RecurringTransactionModule,
   ],
   controllers: [AppController],
   providers: [AppService],

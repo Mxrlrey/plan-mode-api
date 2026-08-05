@@ -26,6 +26,7 @@ export class CreateRecurringTransactionDto {
     @IsPositive()
     value!: number;
 
+    @Type(() => Number)
     @IsInt()
     @Min(1)
     @Max(31)
