@@ -36,7 +36,7 @@ export class RecurringTransactionController {
     @Delete(':id')
     remove(
         @Param('id', new ParseUUIDPipe()) id: string,
-        @CurrentUser() user: AuthenticatedUser
+        @CurrentUser() user: AuthenticatedUser,
     ) {
         return this.recurringTransactionService.remove(id, user.id)
     }
