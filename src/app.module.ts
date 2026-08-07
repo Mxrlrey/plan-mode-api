@@ -7,6 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { TransactionModule } from './modules/transactions/transaction.module';
 import {RecurringTransactionModule} from "@/modules/recurring-transaction/recurring-transaction.module";
 import {InstallmentPurchaseModule} from "@/modules/installments/installment-purchase.module";
+import {ForecastModule} from "@/modules/forecast/forecast.module";
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import {InstallmentPurchaseModule} from "@/modules/installments/installment-purc
     TransactionModule,
     RecurringTransactionModule,
     InstallmentPurchaseModule,
+    ForecastModule,
   ],
   controllers: [AppController],
   providers: [AppService],
