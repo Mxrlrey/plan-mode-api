@@ -5,7 +5,9 @@ import { TransactionService } from './transaction.service';
 import {JwtGuard} from "@/modules/auth/guards/jwt.guard";
 import {CurrentUser} from "@/modules/auth/decorators/current-user.decorator";
 import {AuthenticatedUser} from "@/modules/auth/types/authenticated-user.interface";
+import {ApiBearerAuth} from "@nestjs/swagger";
 
+@ApiBearerAuth()
 @UseGuards(JwtGuard)
 @Controller('transactions')
 export class TransactionController {

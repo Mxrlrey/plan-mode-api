@@ -9,10 +9,10 @@ export class RecurringTransactionService {
         private readonly prisma: PrismaService,
     ) {}
 
-    async findAll(userId: string) {
+    findAll(userId: string) {
         return this.prisma.recurringTransaction.findMany({
             where: {
-                userId
+                userId,
             },
             orderBy: {
                 startDate: 'desc',
@@ -20,7 +20,7 @@ export class RecurringTransactionService {
         });
     }
 
-    async create(createRecurringTransactionDto: CreateRecurringTransactionDto, userId: string) {
+    create(createRecurringTransactionDto: CreateRecurringTransactionDto, userId: string) {
         return this.prisma.recurringTransaction.create({
            data: {
                description: createRecurringTransactionDto.description,

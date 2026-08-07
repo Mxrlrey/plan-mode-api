@@ -9,7 +9,7 @@ export class TransactionService {
         private readonly prisma: PrismaService,
     ) {}
 
-    async findAll(userId: string) {
+    findAll(userId: string) {
         return this.prisma.transaction.findMany({
             where: {
                 userId
@@ -20,7 +20,7 @@ export class TransactionService {
         });
     }
 
-    async create(createTransactionDto: CreateTransactionDto, userId: string) {
+    create(createTransactionDto: CreateTransactionDto, userId: string) {
 
         return this.prisma.transaction.create({
             data: {

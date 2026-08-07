@@ -5,7 +5,9 @@ import {InstallmentPurchaseService} from "@/modules/installments/installment-pur
 import {JwtGuard} from "@/modules/auth/guards/jwt.guard";
 import {CreateInstallmentPurchaseDto} from "@/modules/installments/dto/create-installment-purchase.dto";
 import {UpdateInstallmentPurchaseDto} from "@/modules/installments/dto/update-installment-purchase.dto";
+import {ApiBearerAuth} from "@nestjs/swagger";
 
+@ApiBearerAuth()
 @UseGuards(JwtGuard)
 @Controller('installment-purchases')
 export class InstallmentPurchaseController {

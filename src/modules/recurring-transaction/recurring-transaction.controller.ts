@@ -5,7 +5,9 @@ import {AuthenticatedUser} from "@/modules/auth/types/authenticated-user.interfa
 import {CreateRecurringTransactionDto} from "@/modules/recurring-transaction/dto/create-recurring-transaction.dto";
 import {UpdateRecurringTransactionDto} from "@/modules/recurring-transaction/dto/update-recurring-transaction.dto";
 import {JwtGuard} from "@/modules/auth/guards/jwt.guard";
+import {ApiBearerAuth} from "@nestjs/swagger";
 
+@ApiBearerAuth()
 @UseGuards(JwtGuard)
 @Controller('recurring-transactions')
 export class RecurringTransactionController {
