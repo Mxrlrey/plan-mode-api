@@ -1,7 +1,7 @@
 import {Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post, UseGuards} from "@nestjs/common";
 import {RecurringTransactionService} from "@/modules/recurring-transaction/recurring-transaction.service";
 import {CurrentUser} from "@/modules/auth/decorators/current-user.decorator";
-import {AuthenticatedUser} from "@/modules/auth/types/authenticated-user.interface";
+import {AuthenticatedUser} from "@/modules/auth/interfaces/authenticated-user.interface";
 import {CreateRecurringTransactionDto} from "@/modules/recurring-transaction/dto/create-recurring-transaction.dto";
 import {UpdateRecurringTransactionDto} from "@/modules/recurring-transaction/dto/update-recurring-transaction.dto";
 import {JwtGuard} from "@/modules/auth/guards/jwt.guard";

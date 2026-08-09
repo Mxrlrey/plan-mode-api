@@ -3,7 +3,7 @@ import {Controller, Get, Query, UseGuards} from "@nestjs/common";
 import {JwtGuard} from "@/modules/auth/guards/jwt.guard";
 import {ForecastService} from "@/modules/forecast/forecast.service";
 import {CurrentUser} from "@/modules/auth/decorators/current-user.decorator";
-import {AuthenticatedUser} from "@/modules/auth/types/authenticated-user.interface";
+import {AuthenticatedUser} from "@/modules/auth/interfaces/authenticated-user.interface";
 import {ForecastQueryDto} from "@/modules/forecast/dto/forecast-query.dto";
 
 @ApiBearerAuth()

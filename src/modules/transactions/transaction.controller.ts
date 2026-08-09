@@ -4,7 +4,7 @@ import {UpdateTransactionDto} from "@/modules/transactions/dto/update-transactio
 import { TransactionService } from './transaction.service';
 import {JwtGuard} from "@/modules/auth/guards/jwt.guard";
 import {CurrentUser} from "@/modules/auth/decorators/current-user.decorator";
-import {AuthenticatedUser} from "@/modules/auth/types/authenticated-user.interface";
+import {AuthenticatedUser} from "@/modules/auth/interfaces/authenticated-user.interface";
 import {ApiBearerAuth} from "@nestjs/swagger";
 
 @ApiBearerAuth()

@@ -1,6 +1,6 @@
 import {Body, Controller, Delete, Get, Param, ParseUUIDPipe, Patch, Post, UseGuards} from "@nestjs/common";
 import {CurrentUser} from "@/modules/auth/decorators/current-user.decorator";
-import {AuthenticatedUser} from "@/modules/auth/types/authenticated-user.interface";
+import {AuthenticatedUser} from "@/modules/auth/interfaces/authenticated-user.interface";
 import {InstallmentPurchaseService} from "@/modules/installments/installment-purchase.service";
 import {JwtGuard} from "@/modules/auth/guards/jwt.guard";
 import {CreateInstallmentPurchaseDto} from "@/modules/installments/dto/create-installment-purchase.dto";
